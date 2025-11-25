@@ -1,5 +1,17 @@
-package application;
-
+/*
+ * Class: ButtonStyler
+ * -> This class acts as a utility for applying consistent visual themes and styling properties to JavaFX buttons.
+ * * Exclusive Functions:
+ * styleNavButton() - Static method for applying the purple navigation theme to a button.
+ * @param - Button
+ * @return - void
+ * * styleExitButton() - Static method for applying the red exit theme to a button.
+ * @param - Button
+ * @return - void
+ * * styleActionButton() - Static method for applying the lighter purple theme to operational action buttons.
+ * @param - Button
+ * @return - void
+ */
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Background;

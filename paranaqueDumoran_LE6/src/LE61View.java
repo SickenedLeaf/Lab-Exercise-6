@@ -1,5 +1,11 @@
-package application;
-
+/*
+ * Class: LE61View
+ * -> This class provides the user interface for the "Drawable Shape - Square" exercise, managing user inputs and rendering the shape on a canvas.
+ * * Exclusive Functions:
+ * getContent() - Method for initializing and retrieving the main layout containing input fields, buttons, and the drawing canvas.
+ * @param - none
+ * @return - VBox
+ */
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
@@ -51,7 +57,25 @@ public class LE61View {
 			try {
 				
 				int side = Integer.parseInt(sideInput.getText());
-				String color = colorInput.getText().isEmpty() ? "blue" : colorInput.getText();
+				String color = colorInput.getText();
+
+				if(color.isEmpty()) 
+				{
+				    color = "blue"; 
+				}
+
+				else
+				{
+					try 
+					{
+                        Color.web(color);
+                    } 
+					catch (IllegalArgumentException colorEx) 
+					{
+                        infoLabel.setText("Invalid color! Input a valid or basic color name.");
+                        return; 
+                    }
+				}
 				
 				int maxSize = 250;
 				if (side > maxSize) {
